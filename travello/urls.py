@@ -4,5 +4,5 @@ from travello import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('home', views.home, name='homepage')
+    # path('home', views.home, name='homepage')
 ]
