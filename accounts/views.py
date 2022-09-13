@@ -5,6 +5,23 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 
+def signin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Invalid Credentials')
+            return redirect('signin')
+    else:
+        return render(request, 'signin.html')
+
+
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
@@ -26,6 +43,7 @@ def register(request):
                                                 first_name=first_name,
                                                 last_name=last_name)
                 user.save()
+                return redirect('signin')
         else:
             messages.info(request, 'Password not matching')
             return redirect('register')
