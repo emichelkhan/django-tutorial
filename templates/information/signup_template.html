@@ -1,7 +1,7 @@
 {% load static %}
 <!-- Sign up template form -->
 
-<form action="register" method="post">
+<form action="signup" method="post">
     {% csrf_token %}
     <section class="signup">
         <div class="container">
@@ -35,12 +35,14 @@
                         </div>
                         <div class="form-group">
                             <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="password" name="password2" id="re_pass" placeholder="Repeat your password" required/>
+                            <input type="password" name="password2" id="re_pass" placeholder="Repeat your password"
+                                   required/>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"/>
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
-                                statements in <a href="#" class="term-service">Terms of service</a></label>
+                                statements in <a href="terms" target="_blank" class="term-service"><U>Terms of
+                                    service</U>></a></label>
                         </div>
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
@@ -50,7 +52,7 @@
                 <div class="signup-image">
                     <figure><img src="{% static 'colorlib-regform-7/images/signup-image.jpg' %}" alt="sing up image">
                     </figure>
-                    <a href="#" class="signup-image-link">I am already member</a>
+                    <a href="signin" class="signup-image-link">I am already member</a>
                 </div>
             </div>
         </div>
@@ -58,3 +60,5 @@
     </section>
 </form>
 <!-- Sign up template form -->
+
+

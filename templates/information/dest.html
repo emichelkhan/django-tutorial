@@ -1,20 +1,20 @@
 {% for dest in dests %}
-							<!-- Destination -->
-							<div class="destination item">
-								<div class="destination_image">
-									<img src="{{ dest.img.url }}" alt="image">
+    <!-- Destination -->
+    <div class="destination item">
+        <div class="destination_image">
+            <img src="{{ dest.img.url }}" alt="image">
 
-                                    {% if dest.offer %}
-									<div class="spec_offer text-center"><a href="#">Special offer</a></div>
-                                    {% endif %}
-								</div>
-								<div class="destination_content">
-									<div class="destination_title"><a href="destinations.html">{{ dest.name }}</a>
-									</div>
-									<div class="destination_subtitle">
-										<p>{{ dest.desc }}</p>
-									</div>
-									<div class="destination_price"> ${{ dest.price }}</div>
-								</div>
-							</div>
-                            {% endfor %}
+            {% if dest.offer %}
+                <div class="spec_offer text-center"><a href="#">Special offer</a></div>
+            {% endif %}
+        </div>
+        <div class="destination_content">
+            <div class="destination_title"><a href="destinations.html">{{ dest.name }}</a>
+            </div>
+            <div class="destination_subtitle">
+                <p>{{ dest.desc }}</p>
+            </div>
+            <div class="destination_price"> ${{ dest.price }}</div>
+        </div>
+    </div>
+{% endfor %}

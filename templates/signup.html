@@ -8,27 +8,28 @@
     <title>Travello Signup</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="{% static 'colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{% static 'colorlib-regform-7/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'colorlib-regform-7/css/style.css' %}">
 </head>
 <body>
 
-    <div class="main">
-        <!-- Sign up template form -->
-        {% include 'information/signup_template.html' %}
-        <!-- Sign up template form -->
-    </div>
+<div class="main">
+    <!-- Sign up template form -->
+    {% include 'information/signup_template.html' %}
+    <!-- Sign up template form -->
+</div>
 
-    <div>
-        {% for message in messages %}
+<div>
+    {% for message in messages %}
         <h2>{{ message }}</h2>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 
-    <!-- JS -->
-    <script src="{% static 'colorlib-regform-7/vendor/jquery/jquery.min.js'%}"></script>
-    <script src="{% static 'colorlib-regform-7/js/main.js'%}"></script>
+<!-- JS -->
+<script src="{% static 'colorlib-regform-7/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'colorlib-regform-7/js/main.js' %}"></script>
 </body>
 </html>
