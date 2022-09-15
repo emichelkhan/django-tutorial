@@ -55,3 +55,4 @@ def terms(request):
 def signout(request):
     auth.logout(request)
     return redirect('/')
+
