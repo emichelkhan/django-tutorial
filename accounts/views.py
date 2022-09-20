@@ -56,3 +56,5 @@ def signout(request):
     auth.logout(request)
     return redirect('/')
 
+
+
